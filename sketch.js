@@ -23,10 +23,14 @@ let timer = 45;
 let endTimer = 0;
 
 function setup() {
-  createCanvas(700, 400);
+  createCanvas(windowWidth, windowHeight);
   music.play();
   music.setVolume(0.5);
   music.loop();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function restart() {
